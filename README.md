@@ -7,13 +7,12 @@
   [![](https://img.shields.io/discord/1115955071549702235?style=for-the-badge)](https://discord.gg/CsqAfs9CnM)
 </div>
 
-##Wineのバージョンを、Wine 8 から Wine 10 (もしくは9)に変更する
-詳細はいつかまた書く。
+##Wineのバージョンを、Wine 8 から Wine 10 に変更する
 
 
 ## Maintenance Notice
-
-[Whisky is no longer actively maintained](https://docs.getwhisky.app/maintenance-notice). Apps and games may break at any time.
+-Wineのバージョンを本家のv8から最新のv10にすることで、Steamが起動しなくなる問題を無かったことにしました。
+-またビルドしなおしているため、新UIであるLiquid Glassにも対応しています。
 
 <img width="650" alt="Config" src="https://github.com/Whisky-App/Whisky/assets/42140194/d0a405e8-76ee-48f0-92b5-165d184a576b">
 
