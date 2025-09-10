@@ -53,10 +53,12 @@
 			</array>
 		</dict>
 	</array>
+
 	<key>SUFeedURL</key>
 	<string>https://data.getwhisky.app/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>tnZFAvPUfCpM7Tr7Sx5gKRm6BUQQ6htJQeOMP44evms=</string>
+
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
@@ -102,5 +104,19 @@
 			</dict>
 		</dict>
 	</array>
+
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>153.120.92.9</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

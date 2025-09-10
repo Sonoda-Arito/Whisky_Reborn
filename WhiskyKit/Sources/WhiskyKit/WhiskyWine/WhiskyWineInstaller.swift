@@ -61,7 +61,7 @@ public class WhiskyWineInstaller {
     }
 
     public static func shouldUpdateWhiskyWine() async -> (Bool, SemanticVersion) {
-        let versionPlistURL = "https://data.getwhisky.app/Wine/WhiskyWineVersion.plist"
+        let versionPlistURL = "http://153.120.92.9/Wine/WhiskyWineVersion.plist"
         let localVersion = whiskyWineVersion()
 
         var remoteVersion: SemanticVersion?

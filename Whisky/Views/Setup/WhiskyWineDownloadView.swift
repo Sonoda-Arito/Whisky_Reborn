@@ -65,7 +65,7 @@ struct WhiskyWineDownloadView: View {
         .frame(width: 400, height: 200)
         .onAppear {
             Task {
-                if let url: URL = URL(string: "https://data.getwhisky.app/Wine/Libraries.tar.gz") {
+                if let url: URL = URL(string: "http://153.120.92.9/Wine/Libraries.tar.gz") {
                     downloadTask = URLSession(configuration: .ephemeral).downloadTask(with: url) { url, _, _ in
                         Task.detached {
                             await MainActor.run {

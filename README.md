@@ -7,6 +7,10 @@
   [![](https://img.shields.io/discord/1115955071549702235?style=for-the-badge)](https://discord.gg/CsqAfs9CnM)
 </div>
 
+##Wineのバージョンを、Wine 8 から Wine 10 (もしくは9)に変更する
+詳細はいつかまた書く。
+
+
 ## Maintenance Notice
 
 [Whisky is no longer actively maintained](https://docs.getwhisky.app/maintenance-notice). Apps and games may break at any time.
