@@ -243,8 +243,7 @@ public struct BottleSettings: Codable, Equatable {
     @discardableResult
     public static func decode(from metadataURL: URL) throws -> BottleSettings {
         guard FileManager.default.fileExists(atPath: metadataURL.path(percentEncoded: false)) else {
-            let decoder = PropertyListDecoder()
-            let settings = try decoder.decode(BottleSettings.self, from: Data(contentsOf: metadataURL))
+            var settings = BottleSettings()
             try settings.encode(to: metadataURL)
             return settings
         }
@@ -260,12 +259,12 @@ public struct BottleSettings: Codable, Equatable {
             return settings
         }
 
-        if settings.wineConfig.wineVersion != BottleWineConfig().wineVersion {
-            Logger.wineKit.warning("Bottle has a different wine version `\(settings.wineConfig.wineVersion)`")
-            settings.wineConfig.wineVersion = BottleWineConfig().wineVersion
-            try settings.encode(to: metadataURL)
-            return settings
-        }
+        // if settings.wineConfig.wineVersion != BottleWineConfig().wineVersion {
+        //     Logger.wineKit.warning("Bottle has a different wine version `\(settings.wineConfig.wineVersion)`")
+        //     settings.wineConfig.wineVersion = BottleWineConfig().wineVersion
+        //     try settings.encode(to: metadataURL)
+        //     return settings
+        // }
 
         return settings
     }

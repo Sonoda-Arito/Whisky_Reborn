@@ -32,7 +32,14 @@ public class WhiskyWineInstaller {
     public static let binFolder: URL = libraryFolder.appending(path: "Wine").appending(path: "bin")
 
     public static func isWhiskyWineInstalled() -> Bool {
+        // return whiskyWineVersion() != nil
+        // 環境変数ONで無条件パス（必要なら常時 true でも可）
+        if ProcessInfo.processInfo.environment["WHISKY_SKIP_WW_CHECK"] == "1" {
+            return true
+        }
+        // 既存の判定も一応残す
         return whiskyWineVersion() != nil
+                   || FileManager.default.fileExists(atPath: binFolder.path)
     }
 
     public static func install(from: URL) {

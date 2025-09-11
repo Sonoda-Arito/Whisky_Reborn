@@ -60,6 +60,10 @@ final class BottleVM: ObservableObject, @unchecked Sendable {
                 // Add record
                 await MainActor.run {
                     self.bottlesList.paths.append(newBottleDir)
+                    if let idx = self.bottles.firstIndex(of: bottle) {
+                        self.bottles[idx].isAvailable = true
+                        self.bottles[idx].inFlight = false
+                    }
                     self.loadBottles()
                 }
             } catch {
